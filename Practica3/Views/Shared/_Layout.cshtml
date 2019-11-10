@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mustacchio</title>
+    <LINK rel=StyleSheet href="@Url.Content("~/Content/Styles.css")" type="text/css" media=screen>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <img class="banner" src="https://imagizer.imageshack.com/v2/340x93q90/922/3vru4z.jpg" />
+    <header class="header">
+        <il class="ilheader">
+            @Html.ActionLink("HOME", "Index", "Home", new { style = "text-decoration:none;" })
+            @Html.ActionLink("ABOUT", "About", "Home", new { style = "text-decoration:none;" })
+            @Html.ActionLink("GALLERY", "Galery", "Home", new { style = "text-decoration:none;" })
+            @Html.ActionLink("BLOG", "Blog", "Home", new { style = "text-decoration:none;" })
+            @Html.ActionLink("CONTACT", "Contact", "Home", new { style = "text-decoration:none;" })
+        </il>
+    </header>
+
+    <div class="container body-content">
+        <hr />
+        @RenderBody()
+        <div class="footer">
+            <div class="rights">
+                <p>
+                    &copy; @DateTime.Now.Year - By Mustacchio. All rights reserved.
+                </p>
+            </div>
+            <div class="social">
+                <a href=""><img class="twitter" src="https://imagizer.imageshack.com/v2/44x44q90/924/NTZJH3.jpg" /></a>
+                <a href=""><img class="facebook" src="https://imagizer.imageshack.com/v2/44x44q90/921/9f1gyK.jpg" /></a>
+                <a href=""><img class="google" src="https://imagizer.imageshack.com/v2/44x44q90/924/srDBy2.jpg" /></a>
+                <a href=""><img class="pinterest" src="https://imagizer.imageshack.com/v2/44x44q90/922/Jkjc5G.jpg" /></a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
